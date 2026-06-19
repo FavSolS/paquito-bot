@@ -10,6 +10,8 @@ load_dotenv()
 TOKEN = os.getenv("TOKEN")
 
 def main():
+    print("TOKEN existe?", bool(TOKEN))
+    print("Variables disponibles:", list(os.environ.keys()))
     if not TOKEN:
         raise ValueError("No se encontró el TOKEN. Verificá las variables de entorno.")
     # paso 2: crea la conexion con Telegram
